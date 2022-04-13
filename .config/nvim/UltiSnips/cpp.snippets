@@ -1,0 +1,98 @@
+snippet hc "Header comment" b
+/////////////////////////////////////////////////////////////////////////////
+//
+// ${3:`!p
+slack = 72 - len(t[1])
+space = int(slack / 2)
+snip.rv = '-'*space
+`} ${1} ${4:`!p
+slack = 72 - len(t[1])
+space = int(slack / 2)
+snip.rv = '-'*space
+`}
+//
+// Copyright (c) 2021 Proprio
+//
+// Authors:
+// Jim Youngquist <jay@propriovision.com>
+//
+// Description:
+// ${2}
+//
+/////////////////////////////////////////////////////////////////////////////
+
+endsnippet
+
+snippet sc "Section comment" b
+/////////////////////////////////////////////////////////////////////////////
+// ${3:`!p
+slack = 74 - len(t[1])
+space = int(slack / 2)
+snip.rv = ' '*space
+`} ${1} 
+/////////////////////////////////////////////////////////////////////////////
+//
+// ${2}
+//
+endsnippet
+
+snippet sb "Section break" b
+/////////////////////////////////////////////////////////////////////////////
+// ${3:`!p
+slack = 74 - len(t[1])
+space = int(slack / 2)
+snip.rv = ' '*space
+`} ${1} 
+/////////////////////////////////////////////////////////////////////////////
+endsnippet
+
+snippet cs "Code section" b
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ${1}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~
+endsnippet
+
+snippet cc "Class comment" b
+//===========================================================================
+/// \brief ${1}
+///
+/// ${2}
+///
+endsnippet
+
+snippet cb "Class break" b
+//== Class: ${1} ${2:`!p 
+snip.rv = "="*(64 - len(t[1]))
+`}
+endsnippet
+
+snippet mc "member comment" b
+/// \brief ${1}
+///
+/// \param ${2}
+///
+/// \returns
+///
+endsnippet
+
+snippet fc "Function comment" b
+//---------------------------------------------------------------------------
+/// \brief ${1}
+///
+/// \param ${2}
+///
+/// \returns
+///
+endsnippet
+
+snippet fb "Function break" b
+//---------------------------------------------------------------------------
+endsnippet
+
+snippet fr "for-loop" b
+for (size_t ${1:idx}=0; $1 < $2; ++$1)
+{
+  $0
+}
+endsnippet
+
