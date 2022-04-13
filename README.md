@@ -1,5 +1,8 @@
 # Jim's dotfiles
 
+The contents of this repository are intended to be copied (or symlinked) right
+into your home directory
+
 ## Install the following packages
 
 Assuming Ubuntu...
